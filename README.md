@@ -1,13 +1,20 @@
 # Schwager Stats
-the unofficial library offering the Market Wizard's Trading Performance Evaluation Metrics. See [this blog post](https://seekingvega.github.io/sv-journal/notebooks/EquityCurve.html) for a more detailed explanation.
+the unofficial library offering the Market Wizard's Trading Performance Evaluation Metrics.
+
+See [this blog post](https://seekingvega.github.io/sv-journal/notebooks/EquityCurve.html) for a more detailed explanation.
 
 ## Installation
 This package is still in early alpha please install via:
-'''
+```
 pip install git+https://github.com/seekingvega/schwager-stats.git@main
-'''
+```
 
 ## Quick Start
+The library provides key metrics including:
+- Annualized Return
+- Sortino Ratio (risk-adjusted performance)
+- Maximum Drawdown (worst peak-to-trough decline)
+- Gain-to-Pain Ratio (sum of positive returns divided by absolute sum of negative returns)
 
 ```python
 import pandas as pd
@@ -55,9 +62,3 @@ performance_df = compute_performance_metrics(
 print("\nComparison of multiple securities:")
 print(performance_df)
 ```
-
-The library provides key metrics including:
-- Annualized Return
-- Sortino Ratio (risk-adjusted performance)
-- Maximum Drawdown (worst peak-to-trough decline)
-- Gain-to-Pain Ratio (sum of positive returns divided by absolute sum of negative returns)
